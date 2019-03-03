@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.javaprac.dao.ArticleRetvDao">
+    <select id="ArticleRetv" parameterType="int" resultType="com.javaprac.dto.ArticleDTO">
+    	SELECT 
+  BRD_ID, WRITER, BRD_TITLE, BRD_CONTENT, BRD_CREATE_DATE, BRD_CHG_DATE, 
+  BRD_VIEWS
+FROM BOARD_HST
+WHERE
+  BRD_ID = #{brd_id}
+    </select>
+    <update id="viewsUp" parameterType="int">
+   		UPDATE BOARD_HST SET BRD_VIEWS = BRD_VIEWS+1 WHERE BRD_ID = #{brd_id}
+    </update>
+
+</mapper>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.javaprac.dao.ArticleRegDao">
+
+    <insert id="articleReg" parameterType="com.javaprac.dto.ArticleDTO">
+		
+		INSERT INTO BOARD_HST 
+ 		(BRD_ID, WRITER, BRD_TITLE, BRD_CONTENT, BRD_CREATE_DATE, BRD_CHG_DATE, BRD_VIEWS)
+		VALUES 
+  		(board_seq.nextval, #{writer}, #{brd_title}, #{brd_content}, sysdate, null, 0)
+    </insert>
+
+</mapper>
