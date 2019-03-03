@@ -8,7 +8,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>글 리스트</title>
 </head>
 <body>
 USER ID : ${pageContext.request.userPrincipal.name}<br/>
